@@ -13,7 +13,7 @@ const App = () => {
   const [friend, setFriend] = useState("");
 
   async function getGifts() {
-    await axios.get("http://localhost:3000/gifts").then((response) => {
+    await axios.get("https://open-house-api.onrender.com/gifts").then((response) => {
       setGifts(response.data);
       console.log(response.data)
     })
@@ -32,7 +32,7 @@ const App = () => {
   }
 
   const confirmGift = async () => {
-    await axios.patch(`http://localhost:3000/gifts/${pickedGift}`, {
+    await axios.patch(`https://open-house-api.onrender.com/gifts/${pickedGift}`, {
       friend: friend
     })
     .then((response) => {
