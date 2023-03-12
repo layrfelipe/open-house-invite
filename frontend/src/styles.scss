@@ -1,0 +1,666 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Montserrat:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #004B36;
+        padding: 5vh 0;
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 95%;
+
+            h2, h1, h3 {
+                color: #C68F8E;
+                text-align: center;
+            }
+
+            h2 {
+                font: 300 1.5rem Montserrat;
+            }
+
+            h1 {
+                font: 400 2rem Coiny;
+                margin: 3vh 0 1vh 0;
+            }
+
+            h3 {
+                font: 300 1.4rem Montserrat;
+            }
+        }
+
+        .content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 4vh;
+
+            .caret {
+                margin-top: 25vh;
+                cursor: pointer;
+            }
+
+            .main-wrapper {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 2px solid #C68F8E;
+                border-top-right-radius: 5rem;
+                border-top-left-radius: 5rem;
+                padding: 1vh 0 3vh 0;
+
+                .header {
+                    width: 90%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 1vh;
+
+                    .circle {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        width: 6vh;
+                        height: 6vh;
+                        border: 2px solid #C68F8E;
+
+                        h6 {
+                            font: 400 1.5rem Coiny;
+                            color: #C68F8E;
+                            margin-top: .5vh;
+                        }
+                    }
+
+                    .divider {
+                        width: 100%;
+                        height: 2px;
+                        background: #C68F8E;
+                        margin-top: 2vh;
+                    }
+                }
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 95%;
+                    position: relative;
+
+                    p {
+                        text-align: center;
+                        font: 300 1.25rem Montserrat;
+                        color: #C68F8E;
+                    }
+
+                    span {
+                        font: 400 1.4rem Coiny;
+                    }
+
+                    button, a {
+                        background: #C68F8E;
+                        font: 400 1.25rem Coiny;
+                        color: #004B36;
+                        border: none;
+                        border-radius: .25rem;
+                        padding: 1vh 3vw;
+                        margin-top: 4vh;
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+
+                    .gifts-wrapper {
+                        margin-top: 5vh;
+                        width: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .row {
+                            display: flex;
+                            width: 100%;
+                            justify-content: space-between;
+                            align-items: center;
+                            cursor: pointer;
+
+                            .available {
+                                font: 600 1.1rem Montserrat;
+                                text-align: left;
+                                max-width: 80%;
+                            }
+
+                            .picked {
+                                font: 600 1.1rem Montserrat;
+                                text-decoration: line-through;
+                                text-align: left;
+                                max-width: 80%;
+                            }
+                        }
+
+                        .divider {
+                            width: 100%;
+                            margin: 3vh 0;
+                            border: 1px solid #C68F8E;
+                        }
+                    }
+
+                    .form {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: #004B36;
+                        opacity: .95;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 2;
+
+                        .header {
+                            display: flex;
+                            align-items: flex-end;
+
+                            .close-form {
+                                cursor: pointer;
+                            }
+                        }
+
+                        .content {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            margin-top: 2vh;
+
+                            h3 {
+                                font: 400 1.5rem Coiny;
+                                color: #C68F8E;
+                                text-align: center;
+                            }
+
+                            input {
+                                background: none;
+                                border: 2px solid #C68F8E;
+                                padding: 2vh 0 2vh 1vw;
+                                font: 600 1rem Montserrat;
+                                color: #C68F8E;
+                                width: 80%;
+                                margin-top: 3vh;
+                            }
+
+                            button {
+                                background: #C68F8E;
+                                font: 400 1.25rem Coiny;
+                                color: #004B36;
+                                border: none;
+                                border-radius: .25rem;
+                                padding: 1vh 3vw;
+                                margin-top: 5vh;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #004B36;
+        padding: 5vh 0;
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 95%;
+
+            h2, h1, h3 {
+                color: #C68F8E;
+                text-align: center;
+            }
+
+            h2 {
+                font: 300 2rem Montserrat;
+            }
+
+            h1 {
+                font: 400 2.5rem Coiny;
+                margin: 3vh 0 1vh 0;
+            }
+
+            h3 {
+                font: 300 1.5rem Montserrat;
+            }
+        }
+
+        .content {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 4vh;
+
+            .caret {
+                margin-top: 25vh;
+                cursor: pointer;
+            }
+
+            .main-wrapper {
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 2px solid #C68F8E;
+                border-top-right-radius: 5rem;
+                border-top-left-radius: 5rem;
+                padding: 1vh 0 3vh 0;
+
+                .header {
+                    width: 90%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 1vh;
+
+                    .circle {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        width: 6vh;
+                        height: 6vh;
+                        border: 2px solid #C68F8E;
+
+                        h6 {
+                            font: 400 1.5rem Coiny;
+                            color: #C68F8E;
+                            margin-top: .5vh;
+                        }
+                    }
+
+                    .divider {
+                        width: 100%;
+                        height: 2px;
+                        background: #C68F8E;
+                        margin-top: 2vh;
+                    }
+                }
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 95%;
+                    position: relative;
+
+                    p {
+                        text-align: center;
+                        font: 300 1.75rem Montserrat;
+                        color: #C68F8E;
+                    }
+
+                    span {
+                        font: 400 1.75rem Coiny;
+                    }
+
+                    button, a {
+                        background: #C68F8E;
+                        font: 400 1.4rem Coiny;
+                        color: #004B36;
+                        border: none;
+                        border-radius: .25rem;
+                        padding: 1vh 3vw;
+                        margin-top: 4vh;
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+
+                    .gifts-wrapper {
+                        margin-top: 5vh;
+                        width: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .row {
+                            display: flex;
+                            width: 100%;
+                            justify-content: space-between;
+                            align-items: center;
+                            cursor: pointer;
+
+                            .available {
+                                font: 600 1.4rem Montserrat;
+                                text-align: left;
+                                max-width: 80%;
+                            }
+
+                            .picked {
+                                font: 600 1.4rem Montserrat;
+                                text-decoration: line-through;
+                                text-align: left;
+                                max-width: 80%;
+                            }
+                        }
+
+                        .divider {
+                            width: 100%;
+                            margin: 3vh 0;
+                            border: 1px solid #C68F8E;
+                        }
+                    }
+
+                    .form {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: #004B36;
+                        opacity: .95;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 2;
+
+                        .header {
+                            display: flex;
+                            align-items: flex-end;
+
+                            .close-form {
+                                cursor: pointer;
+                            }
+                        }
+
+                        .content {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            margin-top: 3vh;
+
+                            h3 {
+                                font: 400 2rem Coiny;
+                                color: #C68F8E;
+                                text-align: center;
+                            }
+
+                            input {
+                                background: none;
+                                border: 2px solid #C68F8E;
+                                padding: 2vh 0 2vh 1vw;
+                                font: 600 1rem Montserrat;
+                                color: #C68F8E;
+                                width: 80%;
+                                margin-top: 3vh;
+                            }
+
+                            button {
+                                background: #C68F8E;
+                                font: 400 1.5rem Coiny;
+                                color: #004B36;
+                                border: none;
+                                border-radius: .25rem;
+                                padding: 1vh 3vw;
+                                margin-top: 5vh;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #004B36;
+        padding: 5vh 0;
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 75%;
+
+            h2, h1, h3 {
+                color: #C68F8E;
+                text-align: center;
+            }
+
+            h2 {
+                font: 300 2rem Montserrat;
+            }
+
+            h1 {
+                font: 400 3rem Coiny;
+                margin: 3vh 0 1vh 0;
+            }
+
+            h3 {
+                font: 300 1.75rem Montserrat;
+            }
+        }
+
+        .content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 5vh;
+
+            .caret {
+                margin: 25vh 2vw 0 2vw;
+                cursor: pointer;
+            }
+
+            .main-wrapper {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 2px solid #C68F8E;
+                border-top-right-radius: 5rem;
+                border-top-left-radius: 5rem;
+                padding: 1vh 0 3vh 0;
+
+                .header {
+                    width: 90%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 2vh;
+
+                    .circle {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        width: 6vh;
+                        height: 6vh;
+                        border: 2px solid #C68F8E;
+
+                        h6 {
+                            font: 400 1.5rem Coiny;
+                            color: #C68F8E;
+                            margin-top: .5vh;
+                        }
+                    }
+
+                    .divider {
+                        width: 100%;
+                        height: 2px;
+                        background: #C68F8E;
+                        margin-top: 2vh;
+                    }
+                }
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 85%;
+                    position: relative;
+
+                    p {
+                        text-align: center;
+                        font: 300 1.4rem Montserrat;
+                        color: #C68F8E;
+                    }
+
+                    span {
+                        font: 400 1.5rem Coiny;
+                    }
+
+                    button, a {
+                        background: #C68F8E;
+                        font: 400 1.25rem Coiny;
+                        color: #004B36;
+                        border: none;
+                        border-radius: .25rem;
+                        padding: 1vh 3vw;
+                        margin-top: 4vh;
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+
+                    .gifts-wrapper {
+                        margin-top: 4vh;
+                        width: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .row {
+                            display: flex;
+                            width: 100%;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+
+                            .picked {
+                                font: 600 1.25rem Montserrat;
+                                text-decoration: line-through;
+                            }
+
+                            .available {
+                                font: 600 1.25rem Montserrat;
+                            }
+
+                            .action-icon {
+                                margin-left: 1vw;
+                            }
+                        }
+
+                        .divider {
+                            width: 100%;
+                            margin: 3vh 0;
+                            border: 1px solid #C68F8E;
+                        }
+                    }
+
+                    .form {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: #004B36;
+                        opacity: .95;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 2;
+
+                        .header {
+                            display: flex;
+                            align-items: flex-end;
+
+                            .close-form {
+                                cursor: pointer;
+                            }
+                        }
+
+                        .content {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            margin-top: 2vh;
+
+                            h3 {
+                                font: 400 2rem Coiny;
+                                color: #C68F8E;
+                                text-align: center;
+                            }
+
+                            input {
+                                background: none;
+                                border: 2px solid #C68F8E;
+                                padding: 2vh 0 2vh 1vw;
+                                font: 600 1rem Montserrat;
+                                color: #C68F8E;
+                                width: 80%;
+                                margin-top: 1vh;
+                            }
+
+                            button {
+                                background: #C68F8E;
+                                font: 400 1.25rem Coiny;
+                                color: #004B36;
+                                border: none;
+                                border-radius: .25rem;
+                                padding: 1vh 3vw;
+                                margin-top: 5vh;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
